@@ -1,14 +1,16 @@
-function combine(input1, input2) {
-    var result;
+function combine(input1: number | string, input2: number | string) {
+    let result;
+
     if (typeof input1 === 'number' && typeof input2 === 'number') {
         result = input1 + input2;
-    }
-    else {
+    } else {
         result = input1.toString() + input2.toString();
     }
+
     return result;
 }
-var combinedAges = combine(30, 26);
+
+const combinedAges = combine(30, 26);
 console.log(combinedAges);
-var combineNames = combine('Max', 'Anna');
+const combineNames = combine('Max', 'Anna');
 console.log(combineNames);
